@@ -39,9 +39,9 @@ namespace ECommerce.Api.Search.SerchServices
                 var result = new
                 {
                     Customer = customerResult.IsSuccess ?
-                               customerResult.customer : 
-                               new Modles.Customer { Name = "Could not found the name", Address = "" }
-                    Orders = orderResult.orders,
+                               customerResult.customer :
+                               new Modles.Customer { Name = "Could not found the name", Address = "" },
+                    Orders = orderResult.orders
                 };
                 return (true, result);
             }
